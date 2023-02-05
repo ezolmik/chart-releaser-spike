@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "chart-uploader-spike.fullname" . }}
+  name: {{ include "chart-releaser-spike.fullname" . }}
   labels:
-    {{- include "chart-uploader-spike.labels" . | nindent 4 }}
+    {{- include "chart-releaser-spike.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "chart-uploader-spike.fullname" . }}
+    name: {{ include "chart-releaser-spike.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
