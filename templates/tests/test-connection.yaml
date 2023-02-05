@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "chart-uploader-spike.fullname" . }}-test-connection"
+  labels:
+    {{- include "chart-uploader-spike.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "chart-uploader-spike.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
