@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  chart-releaser-spike:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-02-05T18:11:43.087281+01:00"
+    description: A Helm chart for Kubernetes
+    digest: ce96e4e9a8d4c37cb6b925d4784418da7d900aee2d3b8c40ed9f15ce13c11568
+    name: chart-releaser-spike
+    type: application
+    urls:
+    - https://github.dev.global.tesco.org/Hue12370907/chart-releaser-spike/releases/download/chart-releaser-spike-0.1.0/chart-releaser-spike-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-02-05T18:11:43.087291+01:00"
